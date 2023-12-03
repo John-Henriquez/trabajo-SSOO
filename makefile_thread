@@ -1,0 +1,10 @@
+CC=g++
+CFLAGS=-std=c++11 -03 -Wall -pthread
+
+all: thread
+
+thread: main_thread.cpp
+	$(CC) $(CFLAGS) -o thread main_thread.cpp `pkg-config opencv --cflags --libs` 
+
+clean:
+	rm -f thread 

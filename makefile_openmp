@@ -1,0 +1,12 @@
+CC=g++
+
+CFLAGS=-stf=c++11 -03 -Wall -fopenmp
+
+all: openmp
+
+openmp: main_openmp.cpp
+	$(CC) $(CFLAGS) -o openmp main_openmp.cpp `pkg-config opencv --cflags --libs` 
+
+clean: 
+	rm -f openmp
+

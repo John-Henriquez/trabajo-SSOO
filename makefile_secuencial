@@ -1,0 +1,11 @@
+CC=g++
+CFLAGS=-std=c++11 -O3 -Wall -pthread
+
+all: secuencial
+
+secuencial: main_secuencial.cpp
+	$(CC) $(CFLAGS) -o secuencial main_secuencial.cpp `pkg-config opencv --cflags --libs`
+
+clean:
+	rm -f secuencial
+
