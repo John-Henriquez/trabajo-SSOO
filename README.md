@@ -9,7 +9,7 @@
 
 Para compilar cada versión del programa, utiliza los siguientes comandos:
 
-  -version secuencial
+  - version secuencial
     make -f makefile_secuencial
 
   - version thread
